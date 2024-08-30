@@ -1,0 +1,183 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4; 
+}
+
+.navbar {
+    background-color: #ff6f61; 
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.section {
+    padding: 2rem;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2e8b57;
+    margin-bottom: 1rem;
+}
+
+form {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input[type="number"], select {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #2e8b57; 
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1e6f4c; }
+
+
+.selection-display {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #e6f9e6; 
+    border-radius: 8px;
+    border: 1px solid #2e8b57; 
+}
+
+.selection-display h4 {
+    margin: 0;
+    color: #2e8b57; 
+}
+
+.selection-display p {
+    margin: 10px 0;
+}
+
+
+#cart {
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+#cart-items {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.cart-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; 
+}
+
+#total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6f61; 
+}
+
+
+.animation {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #2e8b57; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .section {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery System</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#" data-section="home">Home</a></li>
+            <li><a href="#" data-section="rice">Rice</a></li>
+            <li><a href="#" data-section="beans">Beans</a></li>
+            <li><a href="#" data-section="spaghetti">Spaghetti</a></li>
+            <li><a href="#" data-section="swallow">Swallow</a></li>
+            <li><a href="#" data-section="bread-egg">Bread & Egg</a></li>
+            <li><a href="#" data-section="drinks">Drinks</a></li>
+            <li><a href="#" data-section="cart">Cart</a></li>
+        </ul>
+    </div>
+
+    
+    <div id="home" class="section">
+        <h1>Welcome to the Scharde's Food Delivery System</h1>
+        <p>Select an option from the menu to start ordering.</p>
+        <div class="animation">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    
+    <div id="rice" class="section hidden">
+        <h1>Rice</h1>
+        <form id="rice-form">
+            <label for="rice-type">Type of Rice:</label>
+            <select id="rice-type">
+                <option value="white">White Rice</option>
+                <option value="jollof">Jollof Rice</option>
+                <option value="fried">Fried Rice</option>
+                <option value="jollof-fried">Jollof + Fried Rice</option>
+                <option value="rice-beans">Rice + Beans</option>
+            </select>
+
+            <label for="rice-spoons">Spoons (₦200 per spoon):</label>
+            <input type="number" id="rice-spoons" min="1" value="1">
+
+            <fieldset>
+                <legend>Extras:</legend>
+                <label><input type="checkbox" id="add-chicken"> Chicken (₦900)</label>
+                <label><input type="checkbox" id="add-egg"> Egg (₦200)</label>
+                <label><input type="checkbox" id="add-fish"> Fish (₦200)</label>
+                <label><input type="checkbox" id="add-coleslaw"> Coleslaw (₦200)</label>
+                <label><input type="checkbox" id="add-beans"> Beans (₦200)</label>
+                <label><input type="checkbox" id="add-moi-moi"> Moi-Moi (₦200)</label>
+            </fieldset>
+
+            <label for="rice-packs">Packs:</label>
+            <input type="number" id="rice-packs" min="1" value="1">
+
+            <button type="button" id="add-to-cart-rice">Add to Cart</button>
+        </form>
+
+        
+        <div id="rice-display" class="selection-display">
+            <h4>Your Selection:</h4>
+            <p id="rice-selection-text">Nothing selected yet.</p>
+        </div>
+    </div>
+
+    
+    <div id="beans" class="section hidden">
+        <h1>Beans</h1>
+        <form id="beans-form">
+            <label for="beans-spoons">Spoons (₦200 per spoon):</label>
+            <input type="number" id="beans-spoons" min="1" value="1">
+
+            <label for="beans-packs">Packs:</label>
+            <input type="number" id="beans-packs" min="1" value="1">
+
+            <button type="button" id="add-to-cart-beans">Add to Cart</button>
+        </form>
+
+       
+        <div id="beans-display" class="selection-display">
+            <h4>Your Selection:</h4>
+            <p id="beans-selection-text">Nothing selected yet.</p>
+        </div>
+    </div>
+
+    
+    <div id="spaghetti" class="section hidden">
+        <h1>Spaghetti</h1>
+        <form id="spaghetti-form">
+            <label for="spaghetti-type">Type of Spaghetti:</label>
+            <select id="spaghetti-type">
+                <option value="white">White Spaghetti</option>
+                <option value="jollof">Jollof Spaghetti</option>
+            </select>
+            <label for="spaghetti-spoons">Spoons (₦200 per spoon):</label>
+            <input type="number" id="spaghetti-spoons" min="1" value="1">
+
+            <fieldset>
+                <legend>Extras:</legend>
+                <label><input type="checkbox" id="add-chicken-spag"> Chicken (₦900)</label>
+                <label><input type="checkbox" id="add-egg-spag"> Egg (₦200)</label>
+                <label><input type="checkbox" id="add-fish-spag"> Fish (₦200)</label>
+                <label><input type="checkbox" id="add-beef-spag"> Beef (₦200)</label>
+            </fieldset>
+
+            <label for="spaghetti-packs">Packs:</label>
+            <input type="number" id="spaghetti-packs" min="1" value="1">
+
+            <button type="button" id="add-to-cart-spaghetti">Add to Cart</button>
+        </form>
+
+       
+        <div id="spaghetti-display" class="selection-display">
+            <h4>Your Selection:</h4>
+            <p id="spaghetti-selection-text">Nothing selected yet.</p>
+        </div>
+    </div>
+
+    
+    <div id="swallow" class="section hidden">
+        <h1>Swallow</h1>
+        <form id="swallow-form">
+            <label for="swallow-type">Type of Swallow:</label>
+            <select id="swallow-type">
+                <option value="eba">EBA</option>
+                <option value="fufu">Fufu</option>
+                <option value="amala">Amala</option>
+            </select>
+
+            <label for="soup-type">Type of Soup:</label>
+            <select id="soup-type">
+                <option value="egusi">Egusi</option>
+                <option value="gbegiri">Gbegiri</option>
+                <option value="okro">Okro</option>
+                <option value="ewedu">Ewedu</option>
+                <option value="vegetable">Vegetable</option>
+            </select>
+
+            <label for="swallow-servings">Number of Swallows (₦200 per swallow):</label>
+            <input type="number" id="swallow-servings" min="1" value="1">
+
+            <label for="swallow-packs">Packs:</label>
+            <input type="number" id="swallow-packs" min="1" value="1">
+
+            <fieldset>
+                <legend>Extras:</legend>
+                <label><input type="checkbox" id="add-fish-swallow"> Fish (₦200)</label>
+                <label><input type="checkbox" id="add-chicken-swallow"> Chicken (₦900)</label>
+            </fieldset>
+
+            <button type="button" id="add-to-cart-swallow">Add to Cart</button>
+        </form>
+
+        
+        <div id="swallow-display" class="selection-display">
+            <h4>Your Selection:</h4>
+            <p id="swallow-selection-text">Nothing selected yet.</p>
+        </div>
+    </div>
+
+    
+    <div id="bread-egg" class="section hidden">
+        <h1>Bread & Egg</h1>
+        <form id="bread-egg-form">
+            <label for="bread-size">Size of Bread:</label>
+            <select id="bread-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="big">Big</option>
+            </select>
+
+            <label for="egg-quantity">Number of Eggs:</label>
+            <input type="number" id="egg-quantity" min="1" value="1">
+
+            <label for="bread-egg-packs">Packs:</label>
+            <input type="number" id="bread-egg-packs" min="1" value="1">
+
+            <button type="button" id="add-to-cart-bread-egg">Add to Cart</button>
+        </form>
+
+        
+        <div id="bread-egg-display" class="selection-display">
+            <h4>Your Selection:</h4>
+            <p id="bread-egg-selection-text">Nothing selected yet.</p>
+        </div>
+    </div>
+
+   
+<div id="drinks" class="section hidden">
+    <h1>Drinks</h1>
+    <form id="drinks-form">
+        <fieldset>
+            <legend>Drinks:</legend>
+            <div class="drink-selection">
+                <label for="coke-quantity">Coke (₦150):</label>
+                <input type="number" id="coke-quantity" min="0" value="0">
+            </div>
+            <div class="drink-selection">
+                <label for="fanta-quantity">Fanta (₦150):</label>
+                <input type="number" id="fanta-quantity" min="0" value="0">
+            </div>
+            <div class="drink-selection">
+                <label for="sprite-quantity">Sprite (₦150):</label>
+                <input type="number" id="sprite-quantity" min="0" value="0">
+            </div>
+            <div class="drink-selection">
+                <label for="pepsi-quantity">Pepsi (₦150):</label>
+                <input type="number" id="pepsi-quantity" min="0" value="0">
+            </div>
+            <div class="drink-selection">
+                <label for="bottle-water-quantity">Bottle Water (₦100):</label>
+                <input type="number" id="bottle-water-quantity" min="0" value="0">
+            </div>
+            <div class="drink-selection">
+                <label for="maltina-quantity">Maltina (₦150):</label>
+                <input type="number" id="maltina-quantity" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <button type="button" id="add-to-cart-drinks">Add to Cart</button>
+    </form>
+
+    
+    <div id="drinks-display" class="selection-display">
+        <h4>Your Selection:</h4>
+        <p id="drinks-selection-text">Nothing selected yet.</p>
+    </div>
+</div>
+
+
+    
+    <div id="cart" class="section hidden">
+        <h1>Cart</h1>
+        <div id="cart-items">
+            
+        </div>
+        <button type="button" id="clear-cart">Clear Cart</button>
+        <a href="checkout.html"><button id="checkout">Checkout</button></a>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>
